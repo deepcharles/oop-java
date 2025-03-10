@@ -346,7 +346,9 @@ public class Damage {
     public static double getFactor(String attackingType, String defendingType) {
         return attackDefenseMap.get(attackingType + defendingType);
     }
-
+    /**
+     * Computes the damage points using a simplified rule from https://bulbapedia.bulbagarden.net/wiki/Damage
+     */
     static public int getDamage(PokemonFinal attacker, PokemonFinal defender) {
         double attackerLevel = (double) attacker.getLevel();
         double attackPower = (double) attacker.getPower();
